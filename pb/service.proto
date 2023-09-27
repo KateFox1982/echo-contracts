@@ -1,0 +1,9 @@
+syntax = "proto3";
+package echo.service.v1;
+option go_package = "github.com/user/echo-contracts/pb/service";
+
+import "message.proto";
+
+service EchoService {
+  rpc Echo(StringMessage) returns (StringMessage) {}
+}

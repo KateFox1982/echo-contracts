@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  protogen:
+    build:
+      context: "."
+      args:
+        PLATFORM: x86_64
+        PROTOC_VERSION: 3.17.3
+    working_dir: "/source"
+    volumes:
+      - "../pb:/source"
+    command: bash -c "
+      protoc *.proto --proto_path=.
+      --go_out=. --go_opt=module=github.com/user/echo-contracts/pb
+      --go-grpc_out=. --go-grpc_opt=module=github.com/user/echo-contracts/pb
+      "
