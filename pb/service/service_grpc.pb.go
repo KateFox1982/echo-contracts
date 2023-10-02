@@ -7,8 +7,8 @@
 package service
 
 import (
+	message "awesomeProject5/pb/message"
 	context "context"
-	message "github.com/user/echo-contracts/pb/message"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -20,7 +20,7 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	EchoService_Echo_FullMethodName = "/echo.service.v1.EchoService/Echo"
+	EchoService_Echo_FullMethodName = "/awesomeProject5.EchoService/Echo"
 )
 
 // EchoServiceClient is the client API for EchoService service.
@@ -97,7 +97,7 @@ func _EchoService_Echo_Handler(srv interface{}, ctx context.Context, dec func(in
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var EchoService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "echo.service.v1.EchoService",
+	ServiceName: "awesomeProject5.EchoService",
 	HandlerType: (*EchoServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

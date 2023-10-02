@@ -1,6 +1,6 @@
 syntax = "proto3";
-package echo.service.v1;
-option go_package = "github.com/user/echo-contracts/pb/service";
+package awesomeProject5;
+option go_package = "awesomeProject5/pb/service";
 
 import "message.proto";
 

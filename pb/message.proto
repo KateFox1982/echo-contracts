@@ -1,7 +1,9 @@
 syntax = "proto3";
-package echo.service.v1;
-option go_package = "github.com/user/echo-contracts/pb/message";
+package awesomeProject5;
+option go_package = "awesomeProject5/pb/message";
 
 message StringMessage {
-  string value = 1;
+  string user=1;
+  string receiver=2;
+  string body=3;
 }

@@ -10,8 +10,8 @@ proto-clean: ## Clean generated proto.
 
 .PHONY: proto-compile
 proto-compile: ## Compile message protobuf and gRPC service files.
-	PLATFORM=$(shell uname -m) PROTOC_VERSION=$(PROTOC_VERSION) docker-compose -f docker/docker-compose.yaml run --rm protogen
+	PLATFORM=$(shell uname -m) PROTOC_VERSION=$(PROTOC_VERSION) docker compose -f docker/docker-compose.yaml run --rm protogen
 
 .PHONY: docker-config
 docker-config: ## Dump docker-compose configuration.
-	PLATFORM=$(shell uname -m) PROTOC_VERSION=$(PROTOC_VERSION) docker-compose -f docker/docker-compose.yaml config
+	PLATFORM=$(shell uname -m) PROTOC_VERSION=$(PROTOC_VERSION) docker compose -f docker/docker-compose.yaml config

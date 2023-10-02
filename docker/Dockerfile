@@ -1,7 +1,7 @@
 FROM golang:1.21
 
-ARG PLATFORM=x86_64
-ARG PROTOC_VERSION=3.17.3
+ARG PLATFORM
+ARG PROTOC_VERSION
 
 RUN apt-get update && apt-get install -y unzip
 
